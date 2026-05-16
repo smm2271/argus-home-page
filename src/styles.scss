@@ -1,6 +1,43 @@
-/* You can add global styles to this file, and also import other style files */
-*{
+@use '@angular/material' as mat;
+
+/* Angular Material 3 theme */
+$theme: mat.define-theme((
+    color: (
+        theme-type: light,
+        primary: mat.$azure-palette,
+        tertiary: mat.$rose-palette,
+    ),
+    typography: mat.define-typography-config((
+        font-family: 'Roboto, "Noto Sans TC", sans-serif',
+    )),
+    density: 0,
+));
+
+@include mat.core();
+@include mat.all-component-themes($theme);
+
+/* Argus palette (Material 3 inspired) */
+:root {
+    --argus-primary: #1E1E24;
+    --argus-secondary: #767B91;
+    --argus-tertiary: #D6F2FF;
+    --argus-surface: #FFFFFF;
+    --argus-on-surface: #1E1E24;
+}
+
+/* Base reset */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', 'Noto Sans TC', sans-serif;
+    background: var(--argus-surface);
+    color: var(--argus-on-surface);
+}
+
+a {
+    color: var(--argus-primary);
 }
