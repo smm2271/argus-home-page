@@ -6,8 +6,7 @@ $theme: mat.define-theme((
         theme-type: light,
         primary: mat.$azure-palette,
         tertiary: mat.$rose-palette,
-    ),
-    density: 0,
+    )
 ));
 
 @include mat.core();
