@@ -7,9 +7,6 @@ $theme: mat.define-theme((
         primary: mat.$azure-palette,
         tertiary: mat.$rose-palette,
     ),
-    typography: mat.define-typography-config((
-        font-family: 'Roboto, "Noto Sans TC", sans-serif',
-    )),
     density: 0,
 ));
 
@@ -23,6 +20,33 @@ $theme: mat.define-theme((
     --argus-tertiary: #D6F2FF;
     --argus-surface: #FFFFFF;
     --argus-on-surface: #1E1E24;
+
+    /* Material 3 system color tokens mapped to Argus palette */
+    --md-sys-color-primary: var(--argus-primary);
+    --md-sys-color-on-primary: #FFFFFF;
+    --md-sys-color-primary-container: var(--argus-secondary);
+    --md-sys-color-on-primary-container: #FFFFFF;
+
+    --md-sys-color-secondary: var(--argus-secondary);
+    --md-sys-color-on-secondary: #FFFFFF;
+    --md-sys-color-secondary-container: var(--argus-tertiary);
+    --md-sys-color-on-secondary-container: var(--argus-primary);
+
+    --md-sys-color-tertiary: var(--argus-tertiary);
+    --md-sys-color-on-tertiary: var(--argus-primary);
+    --md-sys-color-tertiary-container: var(--argus-surface);
+    --md-sys-color-on-tertiary-container: var(--argus-primary);
+
+    --md-sys-color-surface: var(--argus-surface);
+    --md-sys-color-on-surface: var(--argus-on-surface);
+    --md-sys-color-surface-variant: var(--argus-tertiary);
+    --md-sys-color-on-surface-variant: var(--argus-primary);
+
+    --md-sys-color-background: var(--argus-surface);
+    --md-sys-color-on-background: var(--argus-on-surface);
+
+    --md-sys-color-outline: var(--argus-secondary);
+    --md-sys-color-outline-variant: var(--argus-tertiary);
 }
 
 /* Base reset */
