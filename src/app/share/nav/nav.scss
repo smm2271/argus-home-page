@@ -1,0 +1,192 @@
+* {
+    --var-pc-nav-height: 6vh;
+    --var-mobile-nav-height: 8vh;
+    --var-nav-height: var(--var-mobile-nav-height);
+}
+
+.outlet {
+    height: var(--var-nav-height);
+    background-color: rgb(214, 242, 255);
+    display: flex;
+    align-items: center;
+}
+
+
+.logo img {
+    height: calc(var(--var-nav-height) - 1.2rem);
+    display: block;
+}
+
+/* Navigation container */
+.nav-container {
+    --nav-height: var(--var-nav-height);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: var(--nav-height);
+    padding: 0 2rem;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    z-index: 1002;
+    /* above backdrop */
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.08);
+}
+
+.nav-inner {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem;
+}
+
+.brand {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    align-items: center;
+}
+
+/* Desktop menu inside nav bar */
+.menu-desktop {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.menu-item {
+    color: #111;
+    text-decoration: none;
+    padding: 0.25rem 0.1rem;
+    position: relative;
+}
+
+.menu-item::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -6px;
+    height: 2px;
+    background: #111;
+    transform: scaleX(0);
+    transform-origin: left center;
+    transition: transform .22s ease;
+}
+
+.menu-item:hover::after {
+    transform: scaleX(1);
+}
+
+
+/* Hamburger */
+.hamburger {
+    background: transparent;
+    border: 0;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4px;
+    padding: 8px;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: #222;
+    border-radius: 2px;
+    transition: transform .28s ease, opacity .28s ease;
+}
+
+.bar.open:nth-child(1) {
+    transform: translateY(6px) rotate(45deg);
+}
+
+.bar.open:nth-child(2) {
+    opacity: 0;
+}
+
+.bar.open:nth-child(3) {
+    transform: translateY(-6px) rotate(-45deg);
+}
+
+
+/* Dropdown that expands downward with smooth enter/exit */
+.dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #fff;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    padding: 0.5rem 1rem;
+    display: block;
+    z-index: 1003;
+    overflow: hidden;
+    /* for height transition */
+    max-height: 0;
+    /* collapsed by default */
+    opacity: 0;
+    transform: translateY(-6px);
+    transition: max-height .32s cubic-bezier(.2, .9, .2, 1), opacity .28s ease, transform .28s ease;
+    pointer-events: none;
+    /* prevent interaction when closed */
+}
+
+.dropdown.open {
+    max-height: 480px;
+    /* large enough to show items */
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+.dropdown-item {
+    color: #111;
+    text-decoration: none;
+    padding: 0.5rem 0.25rem;
+    border-radius: 4px;
+    display: block;
+}
+
+.dropdown-item:hover {
+    background: rgba(0, 0, 0, 0.04);
+}
+
+/* backdrop covers the page (from under the nav) and darkens it with fade animation */
+.backdrop {
+    position: fixed;
+    top: calc(var(--nav-height));
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.45);
+    z-index: 1001;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .28s ease, visibility .28s ease;
+    pointer-events: none;
+}
+
+.backdrop.open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+/* small responsive tweaks */
+@media (min-width: 768px) {
+    * {
+        --var-nav-height: var(--var-pc-nav-height);
+    }
+
+    .dropdown {
+        width: 320px;
+        right: 1rem;
+        left: auto;
+    }
+}

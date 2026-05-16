@@ -1,0 +1,41 @@
+<nav class="nav-container">
+    <div class="nav-inner">
+        <a class="brand" href="#">
+            <div class="logo">
+                <img src="logos/商標組合-反黑-01.png" alt="Logo" class="logo-img">
+            </div>
+        </a>
+
+        @if (isDesktop) {
+            <!-- Desktop: menu expanded inside the nav bar -->
+            <div class="menu-desktop" role="menubar">
+                <a class="menu-item" href="#">首頁</a>
+                <a class="menu-item" href="#">關於</a>
+                <a class="menu-item" href="#">服務</a>
+                <a class="menu-item" href="#">聯絡</a>
+            </div>
+        }
+
+        @if (!isDesktop) {
+            <!-- Hamburger button (mobile) -->
+            <button class="hamburger" (click)="toggleMenu()" [attr.aria-expanded]="isOpen" aria-label="Menu">
+                <span class="bar" [class.open]="isOpen"></span>
+                <span class="bar" [class.open]="isOpen"></span>
+                <span class="bar" [class.open]="isOpen"></span>
+            </button>
+        }
+    </div>
+
+    @if (!isDesktop) {
+        <!-- Mobile: toggle with hamburger, keep in DOM for animation -->
+        <div class="dropdown" role="menu" [class.open]="isOpen">
+            <a class="dropdown-item" href="#" (click)="closeMenu()">首頁</a>
+            <a class="dropdown-item" href="#" (click)="closeMenu()">關於</a>
+            <a class="dropdown-item" href="#" (click)="closeMenu()">服務</a>
+            <a class="dropdown-item" href="#" (click)="closeMenu()">聯絡</a>
+        </div>
+
+        <!-- backdrop darkens the page and closes the menu when clicked -->
+        <div class="backdrop" (click)="closeMenu()" [class.open]="isOpen"></div>
+    }
+</nav>
