@@ -4,7 +4,7 @@ import { Nav } from './share/nav/nav';
 
 @Component({
   selector: 'app-root',
-  imports: [Nav],
+  imports: [Nav, RouterOutlet],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })
