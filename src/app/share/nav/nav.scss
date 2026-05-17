@@ -4,6 +4,12 @@
     --var-nav-height: var(--var-mobile-nav-height);
 }
 
+.space {
+    height: var(--var-nav-height);
+    width: 100%;
+    display: block;
+}
+
 .outlet {
     height: var(--var-nav-height);
     background-color: rgb(214, 242, 255);
