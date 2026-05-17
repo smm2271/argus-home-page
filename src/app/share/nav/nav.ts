@@ -1,10 +1,11 @@
 import { Component, DestroyRef, HostListener, inject } from '@angular/core';
 import { BreakpointObserver } from '@angular/cdk/layout';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
+import { RouterLink } from "@angular/router";
 
 @Component({
   selector: 'app-nav',
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './nav.html',
   styleUrls: ['./nav.scss'],
 })
