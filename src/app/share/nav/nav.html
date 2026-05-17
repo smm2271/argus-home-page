@@ -10,10 +10,9 @@
         @if (isDesktop) {
             <!-- Desktop: menu expanded inside the nav bar -->
             <div class="menu-desktop" role="menubar">
-                <a class="menu-item" routerLink="/home">首頁</a>
-                <a class="menu-item" routerLink="/about">關於</a>
-                <a class="menu-item" routerLink="/devs">開發者們</a>
-                <a class="menu-item" routerLink="/contact">聯絡我們</a>
+                @for (item of navItems; track item.route) {
+                    <a class="menu-item" [routerLink]="item.route">{{ item.label }}</a>
+                }
             </div>
         }
 
@@ -30,10 +29,9 @@
     @if (!isDesktop) {
         <!-- Mobile: toggle with hamburger, keep in DOM for animation -->
         <div class="dropdown" role="menu" [class.open]="isOpen">
-            <a class="dropdown-item" routerLink="/home" (click)="closeMenu()">首頁</a>
-            <a class="dropdown-item" routerLink="/about" (click)="closeMenu()">關於</a>
-            <a class="dropdown-item" routerLink="/devs" (click)="closeMenu()">開發者們</a>
-            <a class="dropdown-item" routerLink="/contact" (click)="closeMenu()">聯絡我們</a>
+            @for (item of navItems; track item.route) {
+                <a class="dropdown-item" [routerLink]="item.route" (click)="closeMenu()">{{ item.label }}</a>
+            }
         </div>
 
         <!-- backdrop darkens the page and closes the menu when clicked -->

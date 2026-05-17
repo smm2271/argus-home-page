@@ -3,6 +3,11 @@ import { BreakpointObserver } from '@angular/cdk/layout';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { RouterLink } from "@angular/router";
 
+export interface NavItem {
+  label: string;
+  route: string;
+}
+
 @Component({
   selector: 'app-nav',
   imports: [RouterLink],
@@ -16,6 +21,13 @@ export class Nav {
   // whether the hamburger menu is open
   isOpen = false;
   isDesktop = false;
+
+  navItems: NavItem[] = [
+    { label: '首頁', route: '/home' },
+    { label: '關於', route: '/about' },
+    { label: '開發者們', route: '/devs' },
+    { label: '聯絡我們', route: '/contact' }
+  ];
 
   constructor() {
     this.breakpointObserver
