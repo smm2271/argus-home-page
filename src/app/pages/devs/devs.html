@@ -1,1 +1,31 @@
-<p>devs works!</p>
+<div class="devs-page">
+    <div class="header-section">
+        <h1>開發團隊</h1>
+    </div>
+
+    <section class="cards-container">
+        @for (dev of devs; track dev.name) {
+        <div class="dev-card">
+            <div class="avatar-container">
+                <img class="avatar" [src]="dev.avatarUrl" alt="{{ dev.name }}">
+            </div>
+            <div class="content-container">
+                <div class="name-row">
+                    <h2>{{ dev.name }}</h2>
+                </div>
+                <div class="tags-row">
+                    @for (pos of dev.position_tags; track pos) {
+                    @if (pos) {
+                    <span class="tag"># {{ pos }}</span>
+                    }
+                    }
+                </div>
+                <div class="introduction">
+                    <p>{{ dev.introduction }}</p>
+                </div>
+                <a class="profile-link" [href]="dev.profileUrl" target="_blank">{{ dev.profileUrl }}</a>
+            </div>
+        </div>
+        }
+    </section>
+</div>

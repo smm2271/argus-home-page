@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { devs } from './devs_list';
 
 @Component({
   selector: 'app-devs',
@@ -6,4 +7,6 @@ import { Component } from '@angular/core';
   templateUrl: './devs.html',
   styleUrl: './devs.scss',
 })
-export class Devs {}
+export class Devs {
+  devs = devs;
+}
