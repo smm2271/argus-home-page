@@ -21,9 +21,9 @@ export const devs: Dev[] = [
         position_tags: ['資安', 'Plutus 前端', 'Aletheia 身分驗證'],
     }, {
         name: '赤焰',
-        avatarUrl: '',
-        profileUrl: '',
-        introduction: '',
+        avatarUrl: 'https://avatars.githubusercontent.com/u/190609990?v=4',
+        profileUrl: 'https://chiyan54554.github.io/',
+        introduction: '且慢！吾非好幼女之輩，實慕御姐之姿，故自幼育之，待其長成，此乃大智，非惡也。世人皆醉我獨醒，待他日青史留名。',
         position_tags: ['資安', 'Aletheia 加密開發', 'Janus 後端開發'],
     },
 ];
