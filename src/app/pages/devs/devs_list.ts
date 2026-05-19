@@ -12,12 +12,18 @@ export const devs: Dev[] = [
         avatarUrl: 'https://avatars.githubusercontent.com/u/115923904?v=4',
         profileUrl: 'https://zalicsu.idv.tw/',
         introduction: '也許做開源的意義，就是在世界上留下些什麼吧',
-        position_tags: ['發起人', '專案策劃', 'Aletheia認證開發', 'CIS視覺設計'],
+        position_tags: ['發起人', '專案策劃', 'Aletheia 認證開發', 'CIS 視覺設計'],
+    }, {
+        name: 'xiaoma',
+        avatarUrl: 'xiaoma.jpg',
+        profileUrl: '',
+        introduction: '我這輩子最後悔的事，就是沒有聽我媽的話；可是詳細內容我忘了，因為我當時根本沒在聽。',
+        position_tags: ['資安', 'Plutus 前端', 'Aletheia 身分驗證'],
     }, {
         name: '赤焰',
         avatarUrl: '',
         profileUrl: '',
         introduction: '',
-        position_tags: ['資安', 'Aletheia加密開發', 'Janus後端開發'],
-    }
+        position_tags: ['資安', 'Aletheia 加密開發', 'Janus 後端開發'],
+    },
 ];
