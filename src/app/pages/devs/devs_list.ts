@@ -24,12 +24,18 @@ export const devs: Dev[] = [
         avatarUrl: 'https://avatars.githubusercontent.com/u/190609990?v=4',
         profileUrl: 'https://chiyan54554.github.io/',
         introduction: '且慢！吾非好幼女之輩，實慕御姐之姿，故自幼育之，待其長成，此乃大智，非惡也。世人皆醉我獨醒，待他日青史留名。',
-        position_tags: ['高一升高二', '資安', 'Aletheia 加密開發', 'Janus 後端開發'],
+        position_tags: ['資安', 'Aletheia 加密開發', 'Janus 後端開發'],
     }, {
         name: 'LiiMii',
         avatarUrl: 'https://avatars.githubusercontent.com/u/283297951?v=4',
         profileUrl: 'https://github.com/liimii-owo',
         introduction: '撇開這專案做爛的部分，其他做的還挺好的。就像我不知道怎麼證黎曼猜想那樣，我也不知道我自介要打什麼。',
         position_tags: ['國三升高一', 'Plutus 後端', '划水員', '小黃鴨'],
+    }, {
+        name: 'SuperBusy',
+        avatarUrl: 'superbusy.jpg',
+        profileUrl: '',
+        introduction: '5G的時代2G的我，空曠的自介代表著作者屢遭貶官懷才不遇的抑鬱心情',
+        position_tags: ['專案新手', '學墊'],
     }
 ];
