@@ -1,1 +1,196 @@
-<p>home works!</p>
+<main class="home">
+    <section class="hero" id="overview">
+        <div class="hero__glow"></div>
+        <div class="hero__content">
+            <img
+                alt="Project Argus Logo"
+                class="hero__image"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKCi0NFu7KKwS4JsxEYSablaX_eiBf2eJ_V_zDGwfUlWY-eMikNIGEhqkNZjkZl8jRkEdPTeladTb0j2E_eQdytP07QGil05EpxgXDNhqEfB1EvJ4XHbf2JxUXLm8D5bLOAKQLoBw9xshvgvX97PaK_xsD3e4XUVIyh7T_5eE9Lp6PXWEsJ_X_OHqyNS4cjx6z5anpfGerRtoGsRI5NMmb9-F8QQRKnefNcwVzPU4rCK9W9Dtgfi4EiIqndibMqjaDcUw9fntm4g"
+            >
+            <h1 class="hero__title">Argus</h1>
+            <p class="hero__subtitle">開源的數位校園系統</p>
+            <p class="hero__subtitle">任何校園都值得擁有數位化系統</p>
+            <div class="hero__actions">
+                <a class="button button--primary" href="#systems">探索子系統</a>
+                <a class="button button--ghost" href="#open-source">開源聲明</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section--systems" id="systems">
+        <div class="section__header home__container">
+            <h2 class="section__title">三大核心子系統</h2>
+            <span class="section__accent"></span>
+        </div>
+        <div class="systems__grid home__container">
+            <article class="card card--feature">
+                <div>
+                    <div class="card__title">
+                        <span class="material-symbols-outlined card__icon card__icon--primary" style="font-variation-settings: 'FILL' 1;">fingerprint</span>
+                        <h3>Aletheia: 身份系統</h3>
+                    </div>
+                    <p class="card__body">
+                        校園數位化的基石。建立統一的身分識別標準，支持單一登入 (SSO) 與高安全性票證簽發，確保每一筆校內記錄皆可追蹤且不可篡改。
+                    </p>
+                </div>
+                <div class="card__cta">
+                    查看詳情 <span class="material-symbols-outlined">arrow_forward</span>
+                </div>
+                <span class="card__symbol material-symbols-outlined">shield</span>
+            </article>
+
+            <article class="card card--compact card--secondary">
+                <div>
+                    <div class="card__title">
+                        <span class="material-symbols-outlined card__icon card__icon--secondary">directions_bus</span>
+                        <h3>Janus: 校車系統</h3>
+                    </div>
+                    <p class="card__body">
+                        動態 QR Code 驗票技術，防止截圖偽造，並結合即時搭乘驗證與防護重放攻擊 (Replay Attack) 機制，確保接駁資源合理分配。
+                    </p>
+                </div>
+                <div class="tag tag--secondary">即時驗證</div>
+            </article>
+
+            <article class="card card--compact card--gold">
+                <div>
+                    <div class="card__title">
+                        <span class="material-symbols-outlined card__icon card__icon--gold">account_balance_wallet</span>
+                        <h3>Plutus: 福利社系統</h3>
+                    </div>
+                    <p class="card__body">
+                        結合數位簽章的扣款流程，提供即時餘額查詢與後台帳務自動化。取代繁瑣的零錢交易，提升福利社結帳效率。
+                    </p>
+                </div>
+                <div class="tag tag--gold">帳務透明</div>
+            </article>
+
+            <article class="card card--wide">
+                <div class="card__media">
+                    <img
+                        alt="Futuristic server room visualization"
+                        class="card__media-image"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQO1mnS0WuXyqUEWFyUlLMqGT2qjSIiJYUUiWJnaXV1Rez8h81RyVMsHjCyDZGnhElVPBCmiRNKPLsnrMiQneZ7GcI37DjjI9eoSeshLOL2w8GLWwZo8zV1enVv2Kj44Tjd4VwwV1dhGOyffJZV2uOqWtgq5O4P9eFdXu1FeWxBKiSlMFZKv1eXb0bGsCFBUDUZV5R8AjL_wabp17B9RZa8GdqSXxSN4NO1DBB-Sj4GftkLSVOI6WqmnERs1MIRyWIzAHK3WJXwQ"
+                    >
+                </div>
+                <div class="card__content">
+                    <h3>整合的力量</h3>
+                    <p>三個子系統並非孤島，透過 Aletheia 身份系統深度互連，打造完整且安全的數位生態。</p>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <section class="section section--comparison">
+        <div class="home__container">
+            <h2 class="section__title section__title--center">解決方案對比</h2>
+            <div class="comparison">
+                <article class="comparison__card comparison__card--issue">
+                    <h3 class="comparison__title">
+                        <span class="material-symbols-outlined">warning</span>
+                        現有痛點
+                    </h3>
+                    <ul class="comparison__list">
+                        <li>
+                            <span class="comparison__icon comparison__icon--bad">
+                                <span class="material-symbols-outlined">close</span>
+                            </span>
+                            <div>
+                                <p class="comparison__headline">紙本票券 / 1D 條碼</p>
+                                <p>易遺失、易仿冒，且掃描效率低下，在人潮擁擠時容易造成瓶頸。</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="comparison__icon comparison__icon--bad">
+                                <span class="material-symbols-outlined">close</span>
+                            </span>
+                            <div>
+                                <p class="comparison__headline">人工對帳</p>
+                                <p>福利社與校車數據需手動統計，不僅耗費大量人力，更隱含人為錯誤風險。</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="comparison__icon comparison__icon--bad">
+                                <span class="material-symbols-outlined">close</span>
+                            </span>
+                            <div>
+                                <p class="comparison__headline">安全性疑慮</p>
+                                <p>缺乏強健的身份驗證機制，校園場域資源可能遭外部人士冒用。</p>
+                            </div>
+                        </li>
+                    </ul>
+                </article>
+
+                <article class="comparison__card comparison__card--solution">
+                    <h3 class="comparison__title">
+                        <span class="material-symbols-outlined">verified</span>
+                        Argus 解決方案
+                    </h3>
+                    <ul class="comparison__list">
+                        <li>
+                            <span class="comparison__icon comparison__icon--good">
+                                <span class="material-symbols-outlined">check</span>
+                            </span>
+                            <div>
+                                <p class="comparison__headline">動態 QR 與數位票證</p>
+                                <p>即時更新、防護截圖重放，透過手機即可快速感應驗證。</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="comparison__icon comparison__icon--good">
+                                <span class="material-symbols-outlined">check</span>
+                            </span>
+                            <div>
+                                <p class="comparison__headline">自動化數位帳務</p>
+                                <p>所有交易即時記錄，實現零誤差自動對帳，減輕管理壓力。</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="comparison__icon comparison__icon--good">
+                                <span class="material-symbols-outlined">check</span>
+                            </span>
+                            <div>
+                                <p class="comparison__headline">端到端身分安全</p>
+                                <p>採用現代加密技術與 SSO 框架，確保每一位校園成員的資料與權限受安全保護。</p>
+                            </div>
+                        </li>
+                    </ul>
+                </article>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="section section--open-source" id="open-source">
+        <div class="home__container">
+            <div class="open-source">
+                <span class="material-symbols-outlined open-source__icon">code</span>
+                <h2>開源、透明、共同責任</h2>
+                <p>
+                    Project Argus 核心架構完全開放原始碼於 GitHub。我們相信數位主權應歸於校園，透過開放源碼聲明
+                    (Open Source Statement)，我們與使用者建立共同責任框架，確保持續的安全與透明。
+                </p>
+                <a class="button button--primary button--inline" href="https://github.com">
+                    前往 GitHub 專案
+                    <span class="material-symbols-outlined">launch</span>
+                </a>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="home-footer">
+    <div class="home-footer__inner">
+        <div class="home-footer__brand">
+            <span class="home-footer__title">Project Argus</span>
+            <p>© 2026 Argus 透過開源透明化賦予校園更多能量。</p>
+        </div>
+        <div class="home-footer__links">
+            <a href="#">文件</a>
+            <a href="#">隱私權</a>
+            <a href="#">條款</a>
+            <a href="#">GitHub</a>
+        </div>
+    </div>
+</footer>
+    
