@@ -25,7 +25,7 @@ export class Nav {
   navItems: NavItem[] = [
     { label: '首頁', route: '/home' },
     { label: '關於', route: '/about' },
-    { label: '開發者們', route: '/devs' },
+    { label: '開發團隊', route: '/devs' },
     { label: '聯絡我們', route: '/contact' }
   ];
 
